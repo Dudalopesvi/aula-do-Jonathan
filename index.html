@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Style.css">
-  <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
   
-    <title>aula 1 do Jonathan</title>
 </head>
+
 <body>
-    <h1>Exercício de array</h1>
+  <h1>aula- Formulário</h1>
+  <p><label>informe seu nome:</label><br>
+    <input placeholder="digite..." type="text" required="required" name="nome">
+  </p>
+  <p>
+    <label>digite sua mensagem:</label><br>
+    <textarea roxs="10" cols="100" placeholder="Digite sua mensagem..." required="required"
+      name="mensagem">mensagem</textarea>
+  </p>
+
+  <label for="Unidades_do_SENAI">escolha sua unidade do senai:</label>
+  <select name="Unidades_do_SENAI">
+
+    <option selected>florianopolis</option>
+    <option>São José</option>
+    <option>São Pedro de Alcântara</option>
+    <option>Palhoça</option>
+  </select>
+  <br><br>
+  <input type="radio" name="TermosContrato">
+  <label for="TermosContrato">Eu aceito os termos de uso do site.</label>
+<br><br>
+  <input type="radio" name="a" value="a">
+  <input type="radio" name="b" value="b">
+  <input type="radio" name="c" value="C">
+  <br><br>
+  <button autofocus type="submit">Enviar dados do formulário</button>
+
+
+
+
 </body>
+
 </html>
