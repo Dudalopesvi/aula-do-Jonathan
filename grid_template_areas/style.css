@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    background-color: rgb(32, 32, 201);
+    color: aliceblue;
+    line-height: 1.6rem;
+
+}
+
+
+html,
+body {
+    height: 100%;
+
+}
+
+body {
+    padding: 0.5rem;
+
+}
+
+.Grid-Container {
+    background-color: cornflowerblue;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border: 0.2 dotted black;
+    border-radius: 5px;
+    /*DISPLAY GRID A PARTIR DAQUI*/
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px 300px;
+    grid-template-areas:
+        "item1 item2 item2 item2 item2 item2"
+        "item1 item2 item2 item2 item2 item2"
+        "item1 item2 item2 item2 item2 item2"
+        "item1 item2 item2 item2 item2 item2";
+
+
+
+}
+
+.item {
+    /* height: 100px;
+        width: 100px; */
+    background-color: rgb(14, 14, 167);
+    border: 0.2em dotted lightskyblue;
+    border-radius: 5px;
+
+
+
+}
+
+
+
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}

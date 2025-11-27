@@ -1,0 +1,29 @@
+*{
+    background-color: rgb(72, 163, 113);
+    align-items: center;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input{
+    background-color: aliceblue;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+select{
+      background-color: aliceblue;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label:hover{
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+label{
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
