@@ -1,0 +1,179 @@
+/* Importação de fonte moderna e ícones (opcional) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #6c5ce7;
+    --secondary: #00b894;
+    --accent: #ff7675;
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --glass: rgba(255, 255, 255, 0.9);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container Principal com efeito Glass */
+.container {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+h1 {
+    color: #2d3436;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+/* Área de Inputs */
+.input-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e1e1e1;
+    border-radius: 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.2);
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:active { transform: scale(0.95); }
+
+button:first-of-type { /* Botão Adicionar */
+    background: var(--primary);
+    color: white;
+}
+
+#btnSortear {
+    background: var(--secondary);
+    color: white;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 184, 148, 0.3);
+}
+
+/* Lista de nomes (Antes do sorteio) */
+#listaNomes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+#listaNomes li {
+    background: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ESTILIZAÇÃO DOS CARTÕES 3D --- */
+.grid-cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.cartao {
+    height: 250px;
+    perspective: 1200px;
+}
+
+.cartao-corpo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.cartao-corpo.virado {
+    transform: rotateY(180deg);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid white;
+}
+
+/* Frente: Elegante e misteriosa */
+.frente {
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    color: white;
+    box-shadow: 0 15px 35px rgba(108, 92, 231, 0.3);
+}
+
+.frente strong { font-size: 1.2rem; margin-bottom: 10px; }
+.frente::before { content: "🎁"; font-size: 3rem; margin-bottom: 10px; }
+
+/* Verso: Clean e Revelador */
+.verso {
+    background: white;
+    color: #2d3436;
+    transform: rotateY(180deg);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.verso span { font-size: 0.8rem; text-transform: uppercase; color: #b2bec3; letter-spacing: 1px; }
+.verso strong { font-size: 1.5rem; color: var(--secondary); margin-top: 10px; }

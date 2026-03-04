@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Amigo Secreto - Projeto 1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Amigo Secreto</h1>
+
+        <div class="input-section">
+            <input type="text" id="nomeInput" placeholder="Digite o nome do participante">
+            <button onclick="adicionarParticipante()">Adicionar</button>
+        </div>
+
+        <ul id="listaNomes"></ul>
+
+        <button id="btnSortear" onclick="realizarSorteio()">Realizar Sorteio</button>
+
+        <div id="gridCartoes" class="grid-cartoes"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
